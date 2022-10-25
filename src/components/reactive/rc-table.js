@@ -40,8 +40,7 @@ class RCTable extends ReactiveHTMLElement {
         sometimes crashes the browser, sometimes crashes when
         you try to check/uncheck checkboxes.
        */
-
-        document.querySelector('rc-filter').addEventListener('onCheck', this.handleOnCheck.bind(this));
+        // document.querySelector('rc-filter').addEventListener('onCheck', this.handleOnCheck.bind(this));
     }
 
     handleOnCheck( e ) {
