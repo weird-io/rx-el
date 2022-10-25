@@ -9,9 +9,9 @@ const RC_TABLE_TEMPLATE =
             '</tr>' +
         '</thead>' +
         '<tbody>' +
-        '{{? data && data.model}}' +
-            '{{~Object.keys(data.model) : name}}' +
-                '{{~data.model[name].parameters : parameter}}' +
+        '{{? data && data.filtered}}' +
+            '{{~Object.keys(data.filtered) : name}}' +
+                '{{~data.filtered[name].parameters : parameter}}' +
                 '<tr>' +
                     '<td>{{=name}}</td>' +
                     '<td>{{=parameter.name}}</td>' +
@@ -31,26 +31,28 @@ class RCTable extends ReactiveHTMLElement {
         super();
 
         this.data.model = this.produceModel();
+        this.data.filtered = {};
 
-       /*
-       * NOTE
-        Uncomment below rc-filter onCheck listener to watch browser crash.
-
-        It will sometimes get stuck on loading for a while,
-        sometimes crashes the browser, sometimes crashes when
-        you try to check/uncheck checkboxes.
-       */
-        // document.querySelector('rc-filter').addEventListener('onCheck', this.handleOnCheck.bind(this));
+        document.querySelector('rc-filter').addEventListener('onCheck', this.handleOnCheck.bind(this));
     }
 
     handleOnCheck( e ) {
-        this.data.model = this.getFilteredData( e.target.getValues() );
+        this.data.filtered = this.getFilteredData( e.target.getValues() );
+        console.log(this.data.filtered);
     }
 
     getFilteredData( filters ){
         return !!filters && filters.length > 0
-            ? console.log( filters ) // filter data according to the array returned from this
-            : console.log( 'no filters' ); // show empty table
+            // below "works" in the sense that it filters accordingly. Refreshing of the table takes a few seconds after
+            // every click but every onCheck takes longer than the one before it and eventually the browser crashes.
+            ? Object.keys( this.data.model )
+                .filter(( name) => filters.includes( name ))
+                .reduce(( obj, key) => {
+                    return Object.assign( obj, {
+                        [key]: this.data.model[key]
+                    });
+                }, {})
+            : console.log('unchecked all filters'); // show empty table with a placeholder or something
     }
 
     produceModel() {
@@ -63,6 +65,7 @@ class RCTable extends ReactiveHTMLElement {
 
     handleModelResponseRead( model ) {
         this.data.model = model;
+        this.data.filtered = model;
     }
 }
 
