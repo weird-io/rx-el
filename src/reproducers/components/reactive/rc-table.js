@@ -45,6 +45,8 @@ class RCTable extends ReactiveHTMLElement {
         return !!filters && filters.length > 0
             // below "works" in the sense that it filters accordingly. Refreshing of the table takes a few seconds after
             // every click but every onCheck takes longer than the one before it and eventually the browser crashes.
+
+            // wait a few seconds after clicking a checkbox to see the delayed change
             ? Object.keys( this.data.model )
                 .filter(( name) => filters.includes( name ))
                 .reduce(( obj, key) => {
