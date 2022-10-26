@@ -1,4 +1,4 @@
-import ReactiveHTMLElement from '../../reactive/ReactiveHTMLElement.js';
+import ReactiveHTMLElement from '../../../reactive/ReactiveHTMLElement.js';
 
 const RC_FILTER_TEMPLATE =
     '<c-checkbox-select>' +
@@ -33,7 +33,7 @@ class RcFilter extends ReactiveHTMLElement {
     }
 
     produceModel() {
-        fetch('../../mockRegisterData.json').then( this.handleModelResponse.bind(this) );
+        fetch('../mockdata/register-data.json').then( this.handleModelResponse.bind(this) );
     }
 
     handleModelResponse( res ) {

@@ -1,4 +1,4 @@
-import ReactiveHTMLElement from '../../reactive/ReactiveHTMLElement.js';
+import ReactiveHTMLElement from '../../../reactive/ReactiveHTMLElement.js';
 
 const RC_TABLE_TEMPLATE =
     '<table>' +
@@ -56,7 +56,7 @@ class RCTable extends ReactiveHTMLElement {
     }
 
     produceModel() {
-        fetch('../../mockRegisterData.json').then( this.handleModelResponse.bind(this) );
+        fetch('../mockdata/register-data.json').then( this.handleModelResponse.bind(this) );
     }
 
     handleModelResponse( res ) {
