@@ -1,0 +1,23 @@
+/* Definition list */
+.definition-list {
+  margin: 1rem 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.definition-list > dt {
+  flex: 30%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-align: left;
+}
+
+.definition-list > dd {
+  flex: 70%;
+  margin: 0;
+  text-align: right;
+  padding: 0;
+  box-sizing: border-box;
+}

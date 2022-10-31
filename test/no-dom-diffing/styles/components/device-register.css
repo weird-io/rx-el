@@ -1,0 +1,29 @@
+.device-register {
+  border-collapse: collapse;
+  width: 100%;
+  text-align: left;
+}
+
+.device-register > tbody > tr > td {
+  padding: 5px 20px;
+  width: calc(100% / 8);
+}
+
+.device-register > tbody > tr:last-child > td {
+  border-bottom: none;
+}
+
+.device-register > tbody > tr:nth-child(odd) {
+  background-color: var(--primary-background-color);
+}
+
+.device-register > tbody > tr:nth-child(even) {
+  background-color: var(--secondary-background-color-rgba);
+}
+
+@media only screen and (min-width: 768px) {
+  .device-register > thead > tr > th {
+    padding: 10px 20px;
+    width: calc(100% / 8);
+  }
+}

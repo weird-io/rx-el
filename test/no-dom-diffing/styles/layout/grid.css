@@ -1,0 +1,10 @@
+.grid {
+    height: 100%;
+}
+
+.grid::after {
+    content: "";
+    display: block;
+    clear: both;
+    height: 0;
+}

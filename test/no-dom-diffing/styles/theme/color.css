@@ -1,0 +1,18 @@
+:root {
+  /*fonts*/
+  --primary-font-color: var(--tertiary-color);
+
+  /*backgrounds*/
+  --primary-background-color: var(--primary-color);
+  --secondary-background-color: var(--secondary-color);
+  --tertiary-background-color: var(--tertiary-color);
+
+  /*rgba */
+  --secondary-background-color-rgba: rgba(79, 79, 79, 0.08);
+}
+
+:root[theme='default'] {
+  --primary-color: #101010;
+  --secondary-color: #4f4f4f;
+  --tertiary-color: #f4f4f4;
+}
