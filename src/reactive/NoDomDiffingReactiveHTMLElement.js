@@ -15,23 +15,16 @@
  * OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
+import ReactiveHTMLElementTemplate from '/src/reactive/ReactiveHTMLElementTemplate.js';
 
-import ReactiveHTMLElementTemplate from './ReactiveHTMLElementTemplate.js';
-
-class ReactiveHTMLElement extends HTMLElement {
-
+class NoDomDiffingReactiveHTMLElement extends HTMLElement {
     data; // FIXME: prevent override data
-    template; // FIXME: prevent override template
 
-    constructor( template ) {
+    constructor() {
         super();
 
-        this.template = template;
         this.data = this.produceReactiveDataProxy();
-
-        //
-        this.addEventListener( 'datachange', this.handleDataChange.bind( this ) );
-
+        this.addEventListener('datachange', this.handleDataChange.bind(this));
     }
 
     /**
@@ -39,15 +32,13 @@ class ReactiveHTMLElement extends HTMLElement {
      * @returns {{}|boolean|*}
      */
     produceReactiveDataProxy() {
-
         // FIXME: Component reference
         // Because a Proxy is an exotic object, it cannot be extended.
         // In order to get a reference to the
         // This is not ideal from a performance perspective.
         const component = this;
-        const proxies = new WeakSet(); 
+        const proxies = new WeakSet();
         const REACTIVE_OBJECT_PROXY_HANDLER = {
-
             /**
              * When a data variable is set, a proxy tree is constructed.
              *
@@ -59,13 +50,15 @@ class ReactiveHTMLElement extends HTMLElement {
              * @param receiver
              * @returns {boolean}
              */
-            set( target, prop, receiver ) {
-
-                const result = Reflect.set( target, prop, this.decorateReceiverWithProxy( receiver ) )
-                component.dispatchEvent( new Event( 'datachange' ) );
+            set(target, prop, receiver) {
+                const result = Reflect.set(
+                    target,
+                    prop,
+                    this.decorateReceiverWithProxy(receiver)
+                );
+                component.dispatchEvent(new Event('datachange'));
 
                 return result;
-
             },
 
             /**
@@ -75,30 +68,32 @@ class ReactiveHTMLElement extends HTMLElement {
              * @param receiver
              * @returns {*}
              */
-            decorateReceiverWithProxy( receiver ) {
-
-                if ( typeof receiver === 'object' && !proxies.has( receiver ) ) {
-                    for ( let p in receiver ) {
-                        receiver[ p ] = this.decorateReceiverWithProxy( receiver[ p ] );
+            decorateReceiverWithProxy(receiver) {
+                if (typeof receiver === 'object' && !proxies.has(receiver)) {
+                    for (let p in receiver) {
+                        receiver[p] = this.decorateReceiverWithProxy(
+                            receiver[p]
+                        );
                     }
-                    receiver = new Proxy( receiver, REACTIVE_OBJECT_PROXY_HANDLER );
-                    proxies.add( receiver );
+                    receiver = new Proxy(
+                        receiver,
+                        REACTIVE_OBJECT_PROXY_HANDLER
+                    );
+                    proxies.add(receiver);
                 }
 
                 return receiver;
+            },
+        };
 
-            }
-        }
-
-        return new Proxy( {}, REACTIVE_OBJECT_PROXY_HANDLER );
-
+        return new Proxy({}, REACTIVE_OBJECT_PROXY_HANDLER);
     }
 
     /**
      * Handles a change in the data by rendering the template
      * @param e
      */
-    handleDataChange( e ) {
+    handleDataChange(e) {
         this.render();
     }
 
@@ -111,11 +106,12 @@ class ReactiveHTMLElement extends HTMLElement {
      */
     render() {
         // TODO: calculate tree difference and update tree accordingly ( e.g. dom diff )
-        this.innerHTML = new ReactiveHTMLElementTemplate( this.template ).render( this.data );
+        this.innerHTML = new ReactiveHTMLElementTemplate(this.template).render(
+            this.data
+        );
 
-        this.dispatchEvent( new Event( 'rendered' ) )
+        this.dispatchEvent(new Event('rendered'));
     }
-
 }
 
-export default ReactiveHTMLElement;
+export default NoDomDiffingReactiveHTMLElement;

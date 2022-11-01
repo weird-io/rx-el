@@ -1,0 +1,41 @@
+.grid {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.table {
+    border-collapse: collapse;
+    margin-bottom: 1rem;
+}
+
+.table td,
+th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 10px;
+}
+
+.warning {
+    display: none;
+    color: red;
+}
+
+.flex {
+    display: flex;
+}
+
+.line-height-0 {
+    line-height: 0;
+}
+
+.mr-1 {
+    margin-right: 1rem;
+}
+
+.mb-1 {
+    margin-bottom: 1rem;
+}
+
+.mb-4 {
+    margin-bottom: 4rem;
+}
