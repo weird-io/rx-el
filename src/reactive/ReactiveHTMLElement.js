@@ -45,6 +45,7 @@ class ReactiveHTMLElement extends HTMLElement {
         // In order to get a reference to the
         // This is not ideal from a performance perspective.
         const component = this;
+        const proxies = new WeakSet(); 
         const REACTIVE_OBJECT_PROXY_HANDLER = {
 
             /**
@@ -76,11 +77,12 @@ class ReactiveHTMLElement extends HTMLElement {
              */
             decorateReceiverWithProxy( receiver ) {
 
-                if ( typeof receiver === 'object' ) {
+                if ( typeof receiver === 'object' && !proxies.has( receiver ) ) {
                     for ( let p in receiver ) {
                         receiver[ p ] = this.decorateReceiverWithProxy( receiver[ p ] );
                     }
                     receiver = new Proxy( receiver, REACTIVE_OBJECT_PROXY_HANDLER );
+                    proxies.add( receiver );
                 }
 
                 return receiver;
