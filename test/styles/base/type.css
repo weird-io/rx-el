@@ -1,0 +1,54 @@
+/**
+ * Thin
+ */
+@font-face {
+    font-family: 'HelveticaNeue-Thin', sans-serif;
+    font-style: normal;
+    font-weight: 200;
+    src: local('HelveticaNeue Thin'),
+        url('../../fonts/HelveticaNeue-Thin.woff') format('woff');
+}
+
+/**
+ * Condensed Bold
+ */
+@font-face {
+    font-family: 'HelveticaNeue-CondensedBold', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    src: local('HelveticaNeue CondensedBold'),
+        url('../../fonts/HelveticaNeueCondensedBold.woff') format('woff');
+}
+
+body {
+    font-size: 16px;
+    background: var(--primary-background-color);
+    color: var(--primary-font-color);
+}
+
+p,
+body {
+    font-family: 'HelveticaNeue-Thin', sans-serif;
+}
+
+h2,
+button {
+    font-family: 'HelveticaNeue-CondensedBold', sans-serif;
+    font-size: 1.125rem;
+}
+
+h1 {
+    font-size: 3.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.75rem;
+}
+
+h4 {
+    font-size: 1.25rem;
+}

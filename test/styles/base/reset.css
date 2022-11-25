@@ -1,0 +1,19 @@
+body {
+    padding: 60px;
+    margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
+body,
+dt,
+dl {
+    line-height: 2rem;
+}
