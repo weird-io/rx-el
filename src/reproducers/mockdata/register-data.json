@@ -1,0 +1,72 @@
+{
+  "register-a": {
+    "name" : "register a",
+    "parameters" : [
+      {
+        "name" : "param a"
+      },
+      {
+        "name" : "param b"
+      },
+      {
+        "name" : "param c"
+      }
+    ]
+  },
+  "register-b" : {
+    "name" : "register b",
+    "parameters" : [
+      {
+        "name" : "param a"
+      },
+      {
+        "name" : "param b"
+      },
+      {
+        "name" : "param c"
+      }
+    ]
+  },
+  "register-c" : {
+    "name" : "register c",
+    "parameters" : [
+      {
+        "name" : "param a"
+      },
+      {
+        "name" : "param b"
+      },
+      {
+        "name" : "param c"
+      }
+    ]
+  },
+  "register-d" : {
+    "name" : "register d",
+    "parameters" : [
+      {
+        "name" : "param a"
+      },
+      {
+        "name" : "param b"
+      },
+      {
+        "name" : "param c"
+      }
+    ]
+  },
+  "register-e" : {
+    "name" : "register e",
+    "parameters" : [
+      {
+        "name" : "param a"
+      },
+      {
+        "name" : "param b"
+      },
+      {
+        "name" : "param c"
+      }
+    ]
+  }
+}
