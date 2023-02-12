@@ -15,7 +15,7 @@
  * OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-import ReactiveHTMLElementTemplate from '/src/reactive/ReactiveHTMLElementTemplate.js';
+import ReactiveHTMLElementTemplate from './ReactiveHTMLElementTemplate.js';
 
 /**
  * Convert a template string into HTML DOM nodes
@@ -48,6 +48,23 @@ const getNodeContent = function (node) {
     if (node.childNodes && node.childNodes.length > 0) return null;
     return node.textContent;
 };
+
+/**
+ * Get the attributes from a node
+ * @param  {HTMLElement}   node The node
+ * @return {Object}      The attributes
+ */
+const getNodeAttributes = function ( node ) {
+    if ( getNodeType(node) === 'text' || getNodeType(node) === 'comment' ) {
+        return null;
+    }
+    if ( node.getAttributeNames().length > 0 ) {
+        const attributes = {};
+        node.getAttributeNames().forEach( name => attributes[name] = node.getAttribute( name ));
+        return attributes;
+    }
+    return null;
+}
 
 /**
  * Compare the template to the UI and make updates
@@ -93,6 +110,15 @@ const apply = function (template, elem) {
             templateContent !== getNodeContent(domNodes[index])
         ) {
             domNodes[index].textContent = templateContent;
+        }
+
+        // If attributes are different, update it
+        var templateAttributes = getNodeAttributes( node );
+        if (
+            templateAttributes &&
+            JSON.stringify(templateAttributes) !== JSON.stringify(getNodeAttributes( domNodes[index] ))
+        ) {
+            Object.keys(templateAttributes).forEach( key => domNodes[index].setAttribute( key, templateAttributes[key]));
         }
 
         // If target element should be empty, wipe it
