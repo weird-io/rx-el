@@ -151,12 +151,31 @@ const apply = function (template, elem) {
 
 class DomDiffingReactiveHTMLElement extends HTMLElement {
     data;
+    mutationObserver;
 
     constructor() {
         super();
 
         this.data = this.produceReactiveDataProxy();
         this.addEventListener('datachange', this.handleDataChange.bind(this));
+
+        // When attribute values change, dispatch an event with the attribute name to listen to,
+        // so the template can update & rerender
+        this.mutationObserver = new MutationObserver((mutations) => {
+            mutations.forEach((mutation) => {
+                if (mutation.type === "attributes") {
+                    this.dispatchEvent(new CustomEvent('attributeUpdate', {
+                        detail: {
+                            name: mutation.attributeName,
+                        },
+                    }));
+                }
+            });
+        });
+
+        this.mutationObserver.observe(this, {
+            attributes: true,
+        });
     }
 
     /**
