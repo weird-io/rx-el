@@ -2,8 +2,12 @@ function runTest() {
     const selectedAlgorithm = document.getElementById('algorithm').value;
     const content = document.getElementById('content');
     content.innerHTML = '';
+    const component = document.createElement('rx-component');
 
-    const component = document.createElement(`${selectedAlgorithm}-component`);
+    if (selectedAlgorithm === 'no-dom-diffing') {
+        component.setAttribute('no-dom-diffing', '');
+    }
+
     content.appendChild(component);
 }
 

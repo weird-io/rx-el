@@ -1,6 +1,6 @@
 # Stress testing (IIoT-gateway)
 
--   This is a stress test of two `ReactiveHTMLElement`s, one implementing an algorithm with dom diffing, the other one - without it.
+-   This is a stress test of `ReactiveHTMLElement` that can be used both with dom-diffing and without it.
 
 ## Running a test
 
@@ -10,7 +10,7 @@
 
 ## What's under the hood
 
--   Once the the required fields are selected, the custom element `<dom-diffing-component>` or `no-dom-diffing-component` (based on your selected algorithm) will be injected into the DOM
+-   Once the the required fields are selected, the custom element `<rx-component>` will be injected into the DOM
 -   For `no-dom-diffing` algorithm: the child elements of the custom-element will be continuously removed and then re-added to the DOM as frequently as selected by the user.
 -   For `dom-diffing` algorithm: the same principle applies as with `no-dom-diffing` algorithm, yet only a selected portion (25% by default) of the child elements will be updated in the DOM.
 -   For the purpose of this test the **render time** starts with the function call that triggers the DOM update and finishes with the painting of new data.
