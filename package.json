@@ -1,0 +1,30 @@
+{
+  "name": "reactive-html-element",
+  "version": "1.0.0",
+  "description": " Lightweight and reactive web-component based framework",
+  "main": "index.html",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/weird-io/reactive-html-element.git"
+  },
+  "keywords": [
+    "web-components",
+    "framework",
+    "dom",
+    "diffing",
+    "template",
+    "engine"
+  ],
+  "author": "Weird Science",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/weird-io/reactive-html-element/issues"
+  },
+  "homepage": "https://github.com/weird-io/reactive-html-element#readme"
+}
