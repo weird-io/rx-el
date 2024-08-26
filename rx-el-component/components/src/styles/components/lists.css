@@ -1,0 +1,57 @@
+/* Definition list */
+.definition-list {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.definition-list > dt {
+    flex: 30%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: left;
+}
+
+.definition-list > dd {
+    flex: 70%;
+    margin: 0;
+    text-align: right;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+/* Device details list */
+.device-details-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.device-details-list > li {
+    list-style: none;
+    padding: 20px;
+    box-sizing: border-box;
+    border: 1px solid var(--secondary-background-color);
+}
+
+.device-details-list > li:not(:last-child) {
+    margin: 0 0 40px;
+}
+
+
+
+/* Horizontal list */
+.horizontal-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.horizontal-list > li {
+    display: inline-block;
+    margin: 0 5px;
+}

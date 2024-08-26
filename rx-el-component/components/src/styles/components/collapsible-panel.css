@@ -1,0 +1,46 @@
+/* Toggle checkbox */
+@media only screen and (min-width: 1440px){
+    .toggle-details-label {
+        padding-bottom: 20px;
+        padding-top: 20px;
+    }
+}
+
+/* Panel body */
+.panel-body {
+    box-sizing: border-box;
+    position: fixed;
+    left: -100%;
+    top: 0;
+    right: 0;
+    bottom: 60px;
+    width: 100vw;
+    background-color: var(--primary-background-color);
+    overflow-y: scroll;
+}
+
+@media only screen and (min-width: 1440px){
+    .panel-body {
+        padding: 20px;
+        width: 38vw;
+        border-right: 1px solid var(--secondary-background-color);
+    }
+}
+
+/* hide the scrollbar for now until we have a better design for it */
+.panel-body::-webkit-scrollbar {
+    display: none;
+}
+
+.toggle-details-checkbox:checked ~ .panel-body {
+    left: 0;
+    top: 61px;
+}
+
+@media only screen and ( min-width: 1440px ){
+    .toggle-details-checkbox:checked ~ .panel-body {
+        left: 81px;
+        top: 0;
+    }
+}
+

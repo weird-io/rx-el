@@ -1,0 +1,11 @@
+.table {
+    display: block;
+    height: 60vh;
+    overflow: scroll;
+}
+
+.pagination {
+    float: right;
+}
+
+

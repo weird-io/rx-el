@@ -1,0 +1,118 @@
+/* base button */
+.btn {
+    display: inline-block;
+    text-align: center;
+    width: auto;
+    text-transform: uppercase;
+    border: 1px solid transparent;
+    vertical-align: middle;
+    pointer-events: all;
+}
+
+a.btn {
+    line-height: 1rem;
+}
+
+.btn:hover {
+    cursor: pointer;
+}
+
+
+/* primary button */
+.btn.btn-primary {
+    padding: 10px 20px;
+    background-color: var(--quaternary-background-color);
+}
+
+.btn.btn-primary:active {
+    background-color: var(--septenary-background-color);
+    color: var(--secondary-font-color)
+}
+
+.btn.btn-primary:hover {
+    background-color: var(--secondary-background-color);
+    border: 1px solid var(--quaternary-background-color);
+}
+
+
+
+/* secondary button */
+.btn.btn-secondary {
+    padding: 10px 20px;
+    background-color: var(--secondary-background-color);
+}
+
+.btn.btn-secondary:active {
+    background-color: var(--quinary-background-color);
+    color: var(--secondary-font-color);
+}
+
+.btn.btn-secondary:hover {
+    background-color: var(--secondary-background-color);
+    border: 1px solid var(--quaternary-background-color);
+}
+
+
+
+/* outlined button */
+.btn.btn-outlined {
+    border: 1px solid var(--quaternary-background-color);
+    background-color: transparent;
+    padding: 10px 20px;
+}
+
+.btn.btn-outlined:active {
+    background-color: var(--quinary-background-color);
+    color: var(--secondary-font-color);
+}
+
+.btn.btn-outlined:hover {
+    background-color: var(--secondary-background-color);
+    border: 1px solid var(--quinary-background-color);
+}
+
+/* compact button */
+.btn.btn-compact {
+    padding: 5px 10px;
+}
+
+
+/*round button */
+
+.btn.btn-round {
+    border-radius: 50px;
+}
+
+/* disabled button */
+.btn.disabled:hover {
+    cursor: not-allowed;
+}
+
+.btn.disabled {
+    filter: brightness(.2);
+    padding: 10px 20px;
+}
+
+html[theme="light"] .btn.disabled {
+    filter: contrast(.2);
+}
+
+
+
+/* btn list */
+.btn-list {
+    list-style-type: none;
+    padding-left: 0;
+    display: flex;
+}
+
+
+
+/* btn group */
+.btn-group {
+    gap: 20px;
+}
+
+.btn-group.btn-group-compact {
+    gap: 0;
+}

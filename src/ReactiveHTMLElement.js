@@ -15,7 +15,8 @@
  * OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-import ReactiveHTMLElementTemplate from '/src/ReactiveHTMLElementTemplate.js';
+import ReactiveHTMLElementTemplate from './ReactiveHTMLElementTemplate';
+import '../rx-el-component/src/exports';
 
 class ReactiveHTMLElement extends HTMLElement {
     data;

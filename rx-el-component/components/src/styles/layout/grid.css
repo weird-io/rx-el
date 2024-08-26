@@ -1,0 +1,11 @@
+.grid {
+    height: 100%;
+    padding: 20px;
+}
+
+.grid::after {
+    content: "";
+    display: block;
+    clear: both;
+    height: 0;
+}

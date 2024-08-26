@@ -1,0 +1,29 @@
+/*base*/
+@import 'components/button.css';
+@import 'components/lists.css';
+@import 'components/scrollbar.css';
+@import 'components/form.css';
+@import 'components/nav.css';
+@import 'components/collapsible-panel.css';
+@import 'components/toggle-input.css';
+@import 'components/search-input.css';
+@import 'components/tag-list.css';
+@import 'components/table.css';
+@import 'components/select.css';
+@import 'components/pagination.css';
+@import 'components/fieldset.css';
+
+
+/*custom ui base webcomponents*/
+@import 'components/c-overlay.css';
+@import 'components/c-radio-select.css';
+@import 'components/c-checkbox-select.css';
+
+@import 'components/device-register.css';
+@import 'components/device-status.css';
+@import 'components/device-terminal.css';
+@import 'components/device-details.css';
+@import 'components/create-register.css';
+@import 'components/theme-toggle.css';
+@import 'components/line-graph.css';
+@import 'components/lambda-flow.css';

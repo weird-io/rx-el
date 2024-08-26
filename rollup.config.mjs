@@ -4,7 +4,7 @@ import resolve from '@rollup/plugin-node-resolve';
 export default {
     input: 'src/ReactiveHTMLElement.js',
     output: {
-        file: 'dist/bundle.js',
+        file: 'dist/bundle.mjs',
         format: 'es',
     },
     plugins: [
@@ -12,5 +12,6 @@ export default {
         html({
             include: 'src/ReactiveHTMLElementTemplate.js',
         }),
+
     ],
 };

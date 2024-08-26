@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drag and Drop</title>
+    <style>
+        .content {
+            display: flex;
+            margin: 20px;
+        }
+
+        .toolbox {
+            display: flex;
+            flex-direction: column;
+            margin-right: 20px;
+        }
+
+        .btn {
+            padding: 10px;
+            margin-bottom: 10px;
+            background-color: #007bff;
+            color: white;
+            text-align: center;
+            cursor: grab;
+        }
+
+        .canvas {
+            width: 400px;
+            height: 400px;
+            border: 2px dashed #ccc;
+            position: relative;
+        }
+
+
+    </style>
+</head>
+<body>
+
+<div class="content">
+    <div class="toolbox">
+        <a class="btn btn-primary" draggable="true">Schedule (source)</a>
+        <a class="btn btn-primary" draggable="true">Fetch (source)</a>
+        <a class="btn btn-primary" draggable="true">Fetch (sink)</a>
+        <a class="btn btn-primary" draggable="true">REST (sink)</a>
+        <a class="btn btn-primary" draggable="true">Cypher (sink)</a>
+    </div>
+
+    <div class="content">
+        <div class="canvas" id="canvas"></div>
+    </div>
+
+</div>
+
+<script>
+    const buttons = document.querySelectorAll('.btn');
+    const canvas = document.getElementById('canvas');
+
+    buttons.forEach(button => {
+        button.addEventListener('dragstart', (e) => {
+            e.dataTransfer.setData('text/plain', e.target.outerHTML);
+            e.target.classList.add('dragging');
+        });
+
+        button.addEventListener('dragend', (e) => {
+            e.target.classList.remove('dragging');
+        });
+    });
+
+    canvas.addEventListener('dragover', (e) => {
+        e.preventDefault();
+    });
+
+    canvas.addEventListener('drop', (e) => {
+        e.preventDefault();
+        const data = e.dataTransfer.getData('text/plain');
+        canvas.innerHTML += data;
+        addDragAndDropListeners();
+    });
+
+    function addDragAndDropListeners() {
+        const newButtons = canvas.querySelectorAll('.btn');
+        newButtons.forEach(button => {
+            button.addEventListener('dragstart', (e) => {
+                e.dataTransfer.setData('text/plain', e.target.outerHTML);
+                e.target.classList.add('dragging');
+            });
+
+            button.addEventListener('dragend', (e) => {
+                e.target.classList.remove('dragging');
+            });
+        });
+    }
+</script>
+
+</body>
+</html>
