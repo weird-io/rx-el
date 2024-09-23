@@ -4,42 +4,23 @@
 
 .canvas {
     background-color: var(--quaternary-color);
-    border: 2px dashed #ccc;
+    border: 1px dashed #ccc;
     height: 500px;
     width: 100%;
     position: relative;
 }
 
-.lambda-flow-tool{
+.flow-designer {
 
 }
 
-.dragging {
-    opacity: 0.5;
-}
-
-.toolbox .btn {
-    cursor: grab;
-}
-
-.canvas .btn {
-    border: 1px solid white;
-    position: relative;
-}
-
-.canvas .btn::after {
-    content: "";
+.flow-designer-lambda {
     position: absolute;
-    top: 12px;
-    right: -5px;
-    width:10px;
-    height: 10px;
-    background-color: var(--primary-color);
-    border: 1px dashed var(--octonary-color);
-    transform: rotate(45deg);
+    border: 1px dashed #ccc;
 }
 
-.canvas .btn.sink::after, .canvas .btn.process::after {
+.flow-designer-lambda.sink::after,
+.flow-designer-lambda.process::after {
     content: "";
     position: absolute;
     top: 12px;
@@ -50,7 +31,8 @@
     border: 1px dashed var(--octonary-color);
     transform: rotate(45deg);
 }
-.canvas .btn.process::before {
+.flow-designer-lambda.process::before,
+.flow-designer-lambda.source::before {
     content: "";
     position: absolute;
     top: 12px;
@@ -60,11 +42,4 @@
     background-color: var(--primary-color);
     border: 1px dashed var(--octonary-color);
     transform: rotate(45deg);
-}
-
-.arrow {
-    position: absolute;
-    top: 0;
-    left: 0;
-    pointer-events: none;
 }
