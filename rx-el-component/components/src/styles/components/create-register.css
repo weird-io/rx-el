@@ -1,0 +1,39 @@
+/* create register fieldset */
+.create-register-fieldset {
+    position: relative;
+    text-align: right;
+}
+
+.create-register-fieldset .device-create-register-overlay {
+    position: absolute;
+    width: 300px;
+    top: 60px;
+    right: 0;
+}
+
+
+
+/* create register btn */
+.device-create-register-btn {
+    width: max-content;
+}
+
+
+
+/* device create register form */
+.device-create-register-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.device-create-register-form .form-group {
+    padding-bottom: 7px;
+}
+
+.device-create-register-form .form-buttons {
+    text-align: right;
+}
+
+.device-create-register-form .form-buttons > a:first-child {
+    margin-right: 10px;
+}

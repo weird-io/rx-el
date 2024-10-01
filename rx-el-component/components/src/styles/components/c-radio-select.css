@@ -1,0 +1,27 @@
+/*radio li input */
+.radio-li-input {
+    height: 14px;
+    width: 14px;
+    border: 1px solid var(--quinary-background-color);
+    border-radius: 50%;
+    transform: translateY(2px);
+    margin-right: 14px;
+    appearance: none;
+    box-sizing: border-box;
+}
+
+.radio-li-input:checked {
+    background-color: var(--quinary-background-color);
+}
+
+.radio-li-input:hover {
+    cursor: pointer;
+}
+
+
+
+
+/* no visible radio buttons */
+.radio-li-input.no-radio {
+    display: none;
+}

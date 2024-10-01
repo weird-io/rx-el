@@ -1,0 +1,22 @@
+/* Body */
+body {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+
+
+/* Content */
+.content {
+    padding: 20px;
+}
+
+
+
+/* Article */
+@media only screen and ( min-width: 1440px ){
+    article {
+        padding: 20px 40px;
+    }
+}

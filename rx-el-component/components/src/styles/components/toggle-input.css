@@ -1,0 +1,11 @@
+.toggle-checkbox {
+    display: none;
+}
+
+.toggle-label {
+    display: block;
+}
+
+.toggle-label:hover {
+    cursor: pointer;
+}

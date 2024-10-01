@@ -1,0 +1,35 @@
+/* pagination */
+.pagination {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+
+
+/* pagination select */
+.pagination-select {
+    background-color: var(--primary-background-color);
+    border: 1px solid var(--quaternary-background-color);
+    min-width: 79px;
+}
+
+
+
+/* page nav, page size */
+.page-nav,
+.page-size {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+
+
+/* page index */
+.page-index {
+    color: var(--quaternary-color);
+    min-width: 123px;
+}
+

@@ -1,0 +1,36 @@
+.table {
+    border-collapse: collapse;
+    width: 100%;
+    text-align: left;
+}
+
+.table > tbody > tr > td {
+    padding: 5px 20px;
+    width: calc( 100% / 9 );
+}
+
+.table > tbody > tr:last-child > td {
+    border-bottom: none;
+}
+
+.table > tbody > tr:nth-child(odd) {
+    background-color: var(--primary-background-color);
+}
+
+.table > tbody > tr:nth-child(even) {
+    background-color: var(--secondary-background-color);
+}
+
+@media only screen and (min-width: 768px) {
+    .table > thead > tr > th {
+        padding: 10px 20px;
+        width: calc( 100% / 9 );
+    }
+
+    .table > thead {
+        background-color: var(--secondary-background-color);
+        line-height: 2rem;
+    }
+}
+
+

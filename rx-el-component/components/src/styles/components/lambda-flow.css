@@ -1,0 +1,45 @@
+.toolbox {
+
+}
+
+.canvas {
+    background-color: var(--quaternary-color);
+    border: 1px dashed #ccc;
+    height: 500px;
+    width: 100%;
+    position: relative;
+}
+
+.flow-designer {
+
+}
+
+.flow-designer-lambda {
+    position: absolute;
+    border: 1px dashed #ccc;
+}
+
+.flow-designer-lambda.sink::after,
+.flow-designer-lambda.process::after {
+    content: "";
+    position: absolute;
+    top: 12px;
+    left: -5px;
+    width:10px;
+    height: 10px;
+    background-color: var(--primary-color);
+    border: 1px dashed var(--octonary-color);
+    transform: rotate(45deg);
+}
+.flow-designer-lambda.process::before,
+.flow-designer-lambda.source::before {
+    content: "";
+    position: absolute;
+    top: 12px;
+    right: -5px;
+    width:10px;
+    height: 10px;
+    background-color: var(--primary-color);
+    border: 1px dashed var(--octonary-color);
+    transform: rotate(45deg);
+}

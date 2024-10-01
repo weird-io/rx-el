@@ -1,0 +1,17 @@
+.checkbox-li-input {
+    height: 14px;
+    width: 14px;
+    border: 1px solid var(--quinary-background-color);
+    border-radius: 0;
+    transform: translateY(4px);
+    margin-right: 14px;
+    appearance: none;
+}
+
+.checkbox-li-input:checked {
+    background-color: var(--quinary-background-color);
+}
+
+.checkbox-li-input:hover {
+    cursor: pointer;
+}

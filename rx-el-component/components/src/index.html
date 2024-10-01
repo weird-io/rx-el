@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en" theme="default">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Rxel components</title>
+    <link href="./styles/index.css" rel="stylesheet"/>
+</head>
+<body>
+<header class="grid">
+    <div class="column">
+        <div class="content">
+            <h3>Toggle</h3>
+        </div>
+        <div class="column two">
+            <div class="content">
+                <theme-toggle>
+                    <label for="toggle-theme-checkbox"
+                           class="toggle-label nav-link-icon toggle-theme-label"
+                           id="toggle-theme-label"></label>
+                    <input type="checkbox"
+                           class="toggle-checkbox toggle-theme-checkbox"
+                           id="toggle-theme-checkbox"/>
+                </theme-toggle>
+            </div>
+        </div>
+        <div class="column two right">
+            <div class="content">
+                <rx-switch></rx-switch>
+            </div>
+        </div>
+    </div>
+</header>
+<main class="grid">
+        <div class="column">
+
+            <div class="column">
+                <div class="content">
+                    <h3>Type</h3>
+                </div>
+                <div class="content">
+                    <h1>Heading 1</h1>
+                </div>
+                <div class="content">
+                    <h2>Heading 2</h2>
+                </div>
+                <div class="content">
+                    <h3>Heading 3</h3>
+                </div>
+                <div class="content">
+                    <h4>Heading 4</h4>
+                </div>
+                <div class="content">
+                    <h5>Heading 5</h5>
+                </div>
+                <div class="content">
+                    <h6>Heading 6</h6>
+                </div>
+                <div class="content">
+                    <p>Paragraph</p>
+                </div>
+
+            </div>
+            <div class="column">
+                <div class="content">
+                    <h3>Icons</h3>
+                </div>
+                <div class="icons-grid column two">
+                    <div class="content">
+                        <c-icon class="icon-chevron"></c-icon>
+                    </div>
+                    <div class="content">
+                        <c-icon class="icon-chevron chevron chevron-right"></c-icon>
+                    </div>
+                    <div class="content">
+                        <c-icon class="icon-chevron chevron chevron-down"></c-icon>
+                    </div>
+                    <div class="content">
+                        <c-icon class="icon-chevron chevron chevron-left"></c-icon>
+                    </div>
+                    <div class="content ">
+                        <c-icon class="icon-delete"></c-icon>
+                    </div>
+                    <div class="content">
+                        <c-icon class="icon-sun"></c-icon>
+                    </div>
+                    <div class="content">
+                        <c-icon class="icon-moon"></c-icon>
+                    </div>
+                    <div class="content">
+                        <c-icon class="icon-search"></c-icon>
+                    </div>
+                    <div class="content">
+                        <c-icon class="icon-close"></c-icon>
+                    </div>
+                    <div class="content">
+                        <c-icon class="icon-chip"></c-icon>
+                    </div>
+                    <div class="content">
+                        <c-icon class="icon-hamburger"></c-icon>
+                    </div>
+                    <div class="content">
+                        <c-icon class="icon-home"></c-icon>
+                    </div>
+                    <div class="content">
+                        <c-icon class="icon-save"></c-icon>
+                    </div>
+                    <div class="content">
+                        <c-icon class="icon-edit"></c-icon>
+                    </div>
+                    <div class="content">
+                        <c-icon class="icon-chart"></c-icon>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="column">
+            <div class="content">
+                <h3>Fields</h3>
+            </div>
+            <div class="column four">
+                <div class="content">
+                    <rx-search class="rx-search"></rx-search>
+                </div>
+            </div>
+            <div class="column four">
+                <div class="content">
+                    <rx-filter class="rx-filter"></rx-filter>
+                </div>
+            </div>
+            <div class="column four">
+                <div class="content">
+                    <rx-search-autocomplete class="rx-search"></rx-search-autocomplete>
+                </div>
+            </div>
+            <div class="column four">
+                <div class="content">
+                    <label class="checkbox-li-label" for="toggle-all">
+                        <input checked class="checkbox-li-input toggle-all" id="toggle-all"
+                               name="toggle-all" type="checkbox"/>
+                    </label>
+                </div>
+            </div>
+            <div class="column four">
+                <div class="content">
+                    <rx-color></rx-color>
+                </div>
+            </div>
+            <div class="column four">
+                <div class="content">
+                    <input type="date">
+                </div>
+            </div>
+            <div class="column four">
+                <div class="content">
+                   <rx-date></rx-date>
+                </div>
+            </div>
+        </div>
+        <div class="column">
+            <div class="content">
+                <h3>Buttons</h3>
+            </div>
+            <div class="column four">
+                <div class="content">
+                    <a class="btn btn-primary">Primary</a>
+                </div>
+            </div>
+            <div class="column four">
+                <div class="content">
+                    <a class="btn btn-secondary">Secondary</a>
+                </div>
+            </div>
+            <div class="column four">
+                <div class="content">
+                    <a class="btn btn-outlined">
+                        Outlined
+                    </a>
+                </div>
+            </div>
+            <div class="column four">
+                <div class="content">
+                    <div class="form-buttons">
+                        <a class="btn btn-primary btn-outlined" data-overlay-action="close">
+                            Cancel
+                        </a>
+                        <a class="btn btn-primary" data-overlay-action="close">
+                            Create
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="column four">
+                <div class="content">
+
+                    <a class="btn btn-primary icon-left device-create-register-btn"
+                       data-overlay-action="open"
+                       data-overlay-target="device-create-register-overlay">
+                        <c-icon class="icon-add"></c-icon>
+                        Icon Button
+                    </a>
+                </div>
+            </div>
+            <div class="column four">
+                <div class="content">
+                    <a class="btn btn-primary btn-compact">
+                        Compact
+                    </a>
+                </div>
+            </div>
+            <div class="column four">
+                <div class="content">
+                    <a class="btn btn-primary btn-round">
+                       Round
+                    </a>
+                </div>
+            </div>
+            <div class="column four">
+                <div class="content">
+                    <a class="btn btn-disabled">
+                        Disabled
+                    </a>
+                </div>
+            </div>
+    <div class="column">
+            <div class="btn-list btn-group column three">
+                <div class="content">
+                    <a class="btn btn-primary">Primary</a>
+                    <a class="btn btn-primary">Button</a>
+                    <a class="btn btn-primary">Group</a>
+                </div>
+            </div>
+            <div class="btn-list btn-group column three">
+                <div class="content">
+                    <a class="btn btn-secondary">Secondary</a>
+                    <a class="btn btn-secondary">Button</a>
+                    <a class="btn btn-secondary">Group</a>
+                </div>
+            </div>
+        <div class="btn-list btn-group column three">
+            <div class="content">
+                <a class="btn btn-primary btn-round">Round</a>
+                <a class="btn btn-primary btn-round">Button</a>
+                <a class="btn btn-primary btn-round">Group</a>
+            </div>
+        </div>
+        </div>
+        <div class="column">
+            <div class="content">
+                <h3>Table</h3>
+            </div>
+            <div class="column">
+                <div class="content">
+                    <rx-table class="table"></rx-table>
+                </div>
+            </div>
+        </div>
+        <div class="column">
+            <div class="content">
+                <h3>Pagination</h3>
+            </div>
+            <div class="column">
+                <div class="content">
+                    <rx-pagination class="pagination"></rx-pagination>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="column">
+            <div class="content">
+                <h3>Overlay</h3>
+            </div>
+            <div class="column">
+                <div class="content">
+                    <c-overlay class="overlay device-create-register-overlay"
+                               id="device-create-register-overlay">
+                        <device-create-register-form
+                                class="device-create-register-form"></device-create-register-form>
+                    </c-overlay>
+                </div>
+            </div>
+        </div>
+        <div class="column">
+            <div class="content">
+                <h3>Graphs</h3>
+            </div>
+            <div class="content">
+                <rx-line-graph class="graph"
+                        data-axis-margin='[0, 0, 60, 60]' no-dom-diffing
+                ></rx-line-graph>
+                <rx-bar-graph class="graph"></rx-bar-graph>
+                <rx-scatter-graph class="graph"></rx-scatter-graph>
+            </div>
+        </div>
+</main>
+
+<script type="importmap">
+    {
+        "imports": {
+            "rx-el": "../../../dist/bundle.mjs"
+        }
+    }
+</script>
+
+<!-- Component class script reference -->
+<script src="components/base/c-icon.js" type="module"></script>
+<script src="components/base/c-checkbox-select.js" type="module"></script>
+<script src="components/base/c-radio-select.js" type="module"></script>
+<script src="components/base/c-overlay.js" type="module"></script>
+<script src="components/base/rx-color.js" type="module"></script>
+<script src="components/base/rx-date.js" type="module"></script>
+
+
+<script src="components/device-terminal.js" type="module"></script>
+<script src="components/theme-toggle.js" type="module"></script>
+
+<script src="components/device-register.js" type="module"></script>
+<script src="components/device-create-register-form.js" type="module"></script>
+
+<script src="components/reactive/device-status.js" type="module"></script>
+<script src="components/reactive/device-details.js" type="module"></script>
+<script src="components/reactive/rx-filter.js" type="module"></script>
+<script src="components/reactive/rx-search.js" type="module"></script>
+<script src="components/reactive/rx-search-autocomplete.js" type="module"></script>
+<script src="components/reactive/rx-switch.js" type="module"></script>
+<script src="components/reactive/rx-line-graph.js" type="module"></script>
+<script src="components/reactive/rx-bar-graph.js" type="module"></script>
+<script src="components/reactive/rx-scatter-graph.js" type="module"></script>
+
+
+<script src="components/reactive/rx-table.js" type="module"></script>
+<script src="components/reactive/rx-pagination.js" type="module"></script>
+<script src="components/reactive/rx-flow-designer.js" type="module"></script>
+
+</body>
+</html>

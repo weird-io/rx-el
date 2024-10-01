@@ -1,0 +1,71 @@
+theme-toggle {
+    line-height: 0;
+}
+
+.toggle-theme-label:hover {
+    cursor: pointer;
+}
+
+/* Theme inputs input icons */
+/*
+Grab the svg from figma, adjust as needed and use https://yoksel.github.io/url-encoder/
+*/
+html[theme=default] .toggle-theme-label::before {
+    content: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_861_150)'%3E%3Cpath d='M20 28.3327C24.6024 28.3327 28.3333 24.6017 28.3333 19.9993C28.3333 15.397 24.6024 11.666 20 11.666C15.3976 11.666 11.6667 15.397 11.6667 19.9993C11.6667 24.6017 15.3976 28.3327 20 28.3327Z' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M20 1.66602V4.99935' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M20 35V38.3333' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M7.03333 7.0332L9.4 9.39987' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M30.6 30.5996L32.9667 32.9663' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M1.66666 20H5' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M35 20H38.3333' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M7.03333 32.9663L9.4 30.5996' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M30.6 9.39987L32.9667 7.0332' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_861_150'%3E%3Crect width='40' height='40' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+}
+
+html[theme=light] .toggle-theme-label::before {
+    content: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M35 21.3167C34.7378 24.1537 33.6731 26.8573 31.9304 29.1113C30.1877 31.3653 27.8392 33.0763 25.1595 34.0442C22.4799 35.0121 19.58 35.1969 16.7992 34.5768C14.0184 33.9568 11.4717 32.5576 9.45706 30.543C7.44245 28.5283 6.04325 25.9816 5.4232 23.2008C4.80314 20.42 4.98788 17.5201 5.95579 14.8405C6.92369 12.1608 8.63474 9.81228 10.8887 8.06959C13.1427 6.3269 15.8463 5.26218 18.6834 5C17.0224 7.24711 16.2231 10.0157 16.4309 12.8024C16.6387 15.589 17.8398 18.2084 19.8157 20.1843C21.7916 22.1602 24.4111 23.3613 27.1977 23.5691C29.9843 23.7769 32.7529 22.9776 35 21.3167Z' stroke='white' stroke-width='2' stroke-linecap='square'/%3E%3C/svg%3E%0A");
+}
+
+html[theme=light] .toggle-theme-label::before {
+    filter: invert(1);
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;  /* Reduced width */
+    height: 20px; /* Reduced height */
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--quinary-color);
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 14px;
+    width: 14px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: .4s;
+}
+
+
+input:checked + .slider:before {
+    transform: translateX(20px); /* Adjusted for smaller size */
+}
+
+.slider.round {
+    border-radius: 20px; /* Adjusted for smaller size */
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}

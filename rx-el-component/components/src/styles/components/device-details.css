@@ -1,0 +1,14 @@
+.device-details-list h2 {
+    text-transform: uppercase;
+    font-size: 1rem;
+    line-height: 2rem;
+    text-align: left;
+}
+
+dt {
+    text-transform: capitalize;
+}
+
+dt, dd {
+    font-size: 1rem;
+}

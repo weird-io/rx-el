@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Rollup Bundle</title>
+
+</head>
+<body>
+<rx-button variant="primary">Button</rx-button>
+<rx-datalist></rx-datalist>
+<rx-autocomplete-field options='["ABC", "DEF","GHI"]'></rx-autocomplete-field>
+<rx-counter></rx-counter>
+<rx-date-picker></rx-date-picker>
+
+<script type="importmap">
+    {
+        "imports": {
+            "rx-el": "./bundle.mjs"
+        }
+    }
+</script>
+<script type="module" src="../rx-el-component/components/src/components/base/RxButton.js"></script>
+<script type="module" src="../rx-el-form/src/RxAutocomplete.js"></script>
+<script type="module" src="../rx-el-component/components/src/components/base/RxDatalist.js"></script>
+<script type="module" src="../rx-el-component/components/src/components/base/RxCounter.js"></script>
+<script type="module" src="../rx-el-component/components/src/components/base/RxDate.js"></script>
+
+</body>
+</html>

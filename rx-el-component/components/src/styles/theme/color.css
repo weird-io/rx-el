@@ -1,0 +1,42 @@
+:root {
+    /*utility colors*/
+    --success-color: #13be6c;
+    --warning-color: #e06b1b;
+    --error-color: #c44e4e;
+
+    /*fonts*/
+    --primary-font-color: var( --septenary-color );
+    --secondary-font-color: var( --tertiary-color );
+
+    /*backgrounds*/
+    --primary-background-color: var( --primary-color );
+    --secondary-background-color: var( --secondary-color );
+    --tertiary-background-color: var( --tertiary-color );
+    --quaternary-background-color: var( --quaternary-color );
+    --quinary-background-color: var( --quinary-color );
+    --senary-background-color: var( --senary-color );
+    --septenary-background-color: var( --septenary-color );
+    --octonary-background-color: var( --octonary-color );
+}
+
+:root[theme='default'] {
+    --primary-color: #000000;
+    --secondary-color: #101010;
+    --tertiary-color: #1A1A1A;
+    --quaternary-color: #202020;
+    --quinary-color: #E0E0E0;
+    --senary-color: #EEEEEE;
+    --septenary-color: #F4F4F4;
+    --octonary-color: #ffffff;
+}
+
+:root[theme='light'] {
+    --primary-color: #FFFFFF;
+    --secondary-color: #F4F4F4;
+    --tertiary-color: #EEEEEE;
+    --quaternary-color: #E0E0E0;
+    --quinary-color: #202020;
+    --senary-color: #1A1A1A;
+    --septenary-color: #101010;
+    --octonary-color: #000000;
+}
