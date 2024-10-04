@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" theme="default">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>RxEL Graphs</title>
+    <link href="../../styles/index.css" rel="stylesheet"/>
+</head>
+<body>
+<header class="grid">
+    <div class="column">
+        <div class="content">
+            <h3>Toggle</h3>
+        </div>
+        <div class="column two">
+            <div class="content">
+                <theme-toggle>
+                    <label for="toggle-theme-checkbox"
+                           class="toggle-label nav-link-icon toggle-theme-label"
+                           id="toggle-theme-label"></label>
+                    <input type="checkbox"
+                           class="toggle-checkbox toggle-theme-checkbox"
+                           id="toggle-theme-checkbox"/>
+                </theme-toggle>
+            </div>
+        </div>
+        <div class="column two right">
+            <div class="content">
+                <rx-switch></rx-switch>
+            </div>
+        </div>
+    </div>
+</header>
+<main class="grid">
+        <div class="column">
+            <div class="content">
+                <h3>Graphs</h3>
+            </div>
+            <div class="content">
+                <rx-line-graph class="graph">
+                </rx-line-graph>
+
+            </div>
+        </div>
+</main>
+
+<script type="importmap">
+    {
+        "imports": {
+            "rx-el": "../../dist/bundle.mjs"
+        }
+    }
+</script>
+
+<!-- Component class script reference -->
+
+<script src="../../rx-el-component/src/components/reactive/RxThemeToggle.js" type="module"></script>
+<script src="./graph/RxLineGraph.js" type="module"></script>
+
+
+
+</body>
+</html>

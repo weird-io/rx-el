@@ -1,4 +1,4 @@
-class COverlay extends HTMLElement {
+class RxOverlay extends HTMLElement {
     constructor() {
         super();
 
@@ -25,4 +25,4 @@ class COverlay extends HTMLElement {
     }
 }
 
-customElements.define('c-overlay', COverlay );
+customElements.define('c-overlay', RxOverlay );

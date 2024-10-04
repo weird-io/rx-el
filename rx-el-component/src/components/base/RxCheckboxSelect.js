@@ -1,4 +1,4 @@
-class CCheckboxSelect extends HTMLElement {
+class RxCheckboxSelect extends HTMLElement {
     constructor() {
         super();
 
@@ -22,4 +22,4 @@ class CCheckboxSelect extends HTMLElement {
     }
 }
 
-customElements.define('c-checkbox-select', CCheckboxSelect);
+customElements.define('c-checkbox-select', RxCheckboxSelect);

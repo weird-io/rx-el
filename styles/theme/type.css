@@ -5,7 +5,7 @@
     font-family: 'HelveticaNeue-Thin', sans-serif;
     font-style: normal;
     font-weight: 200;
-    src: local('HelveticaNeue Thin'), url('../../assets/fonts/HelveticaNeue-Thin.woff') format( 'woff' );
+    src: local('HelveticaNeue Thin'), url('../../rx-el-component/src/assets/fonts/HelveticaNeue-Thin.woff') format( 'woff' );
 }
 
 /**
@@ -15,7 +15,7 @@
     font-family: 'HelveticaNeue-CondensedBold', sans-serif;
     font-style: normal;
     font-weight: 400;
-    src: local('HelveticaNeue CondensedBold'), url('../../assets/fonts/HelveticaNeueCondensedBold.woff') format( 'woff' );
+    src: local('HelveticaNeue CondensedBold'), url('../../rx-el-component/src/assets/fonts/HelveticaNeueCondensedBold.woff') format( 'woff' );
 }
 
 /**
@@ -25,7 +25,7 @@
     font-family: 'HelveticaNeue-CondensedBlack', sans-serif;
     font-style: normal;
     font-weight: 700;
-    src: local('HelveticaNeue CondensedBlack'), url('../../assets/fonts/HelveticaNeueCondensedBlack.woff') format( 'woff' );
+    src: local('HelveticaNeue CondensedBlack'), url('../../rx-el-component/src/assets/fonts/HelveticaNeueCondensedBlack.woff') format( 'woff' );
 }
 
 body {

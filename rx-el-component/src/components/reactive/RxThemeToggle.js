@@ -1,4 +1,4 @@
-class ThemeToggle extends HTMLElement {
+class RxThemeToggle extends HTMLElement {
     constructor() {
         super();
         this.checkbox = this.querySelector('input[type=checkbox]');
@@ -10,4 +10,4 @@ class ThemeToggle extends HTMLElement {
     };
 }
 
-customElements.define('theme-toggle', ThemeToggle);
+customElements.define('theme-toggle', RxThemeToggle);

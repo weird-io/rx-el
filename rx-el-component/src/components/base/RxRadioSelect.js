@@ -1,4 +1,4 @@
-class CRadioSelect extends HTMLElement {
+class RxRadioSelect extends HTMLElement {
     constructor() {
         super();
 
@@ -13,4 +13,4 @@ class CRadioSelect extends HTMLElement {
     }
 }
 
-customElements.define('c-radio-select', CRadioSelect );
+customElements.define('c-radio-select', RxRadioSelect );
